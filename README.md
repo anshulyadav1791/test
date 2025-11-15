@@ -47,3 +47,19 @@ input() # result for input() is always a str
 int(input()) #int
 
 float(input()) #float 
+
+# Strings
+## String is data type that stores a sequence of characters.
+## Basic Operations
+### concatention
+    "hello" + "world" ---->  "helloworld
+### length of str
+    len(str)
+
+### Slicing 
+   Accessing parts of a string 
+   str[ starting_idx : ending_idx ] #ending idx is not included
+   strw = "ApnaCallege"
+   str[ 1 : 4 ] is "pna"
+   str[ : 4 ] is same as str [ 0: 4]
+   str[1 : ] is same as str[ 1: len(str) ]
