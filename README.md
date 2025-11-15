@@ -1,4 +1,4 @@
-# python notes
+# Python notes
 
 # Python Character Set
 * Letters -A to Z, a to z
@@ -29,11 +29,21 @@ Keyworks are reserved wwords in python.
 
 # Operators
 ## Arithmetic Operators
-+ - * / % // // **
++ - * / % **
 ## Relatinal / Compraison Operators
 ==, !=, >, <, <=
 ## Assignment Oprators
 =, +=, -=, *=, %=, **= 
 ## Logical Operators
-and or not
+and, or, not
 
+## Type Conversion
+## Type Casting
+# Input in Python 
+input() statement is used to accept values (using keyboards) from user
+
+input() # result for input() is always a str
+
+int(input()) #int
+
+float(input()) #float 
