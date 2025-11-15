@@ -30,9 +30,9 @@ Keyworks are reserved wwords in python.
 # Operators
 ## Arithmetic Operators
 + - * / % // // **
-Relatinal / Compraison Operators
+## Relatinal / Compraison Operators
 ==, !=, >, <, <=
-Assignment Oprators
+## Assignment Oprators
 =, +=, -=, *=, %=, **= 
 ## Logical Operators
 and or not
