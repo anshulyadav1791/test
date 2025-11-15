@@ -27,9 +27,13 @@ Keyworks are reserved wwords in python.
 |    continue|    from     |    not     |    yield     |    import  |    global  |
 |    def     |
 
-
-
-
-
-
+# Operators
+## Arithmetic Operators
++ - * / % // // **
+Relatinal / Compraison Operators
+==, !=, >, <, <=
+Assignment Oprators
+=, +=, -=, *=, %=, **= 
+## Logical Operators
+and or not
 
