@@ -18,16 +18,16 @@
 
 # Keywords 
 Keyworks are reserved wwords in python.
-|    and     |    else     |    in      |    return    |
-|------------|-------------|------------|--------------|
-|    as      |    except   |    is      |    True      |
-|    assert  |    finally  |    lambda  |    try       |
-|    break   |    False    |    nonlacl |    with      |
-|    class   |    for      |    None    |    while     |
-|    continue|    from     |    not     |    yield     |
-|    def     |    global   |    or      |    del       |
-|    if      |    pass     |    elif    |    import    |
-|    raise   |             |            |              |
+|    and     |    else     |    in      |    return    |    if      |    if      |
+|------------|-------------|------------|--------------|------------|------------|
+|    as      |    except   |    is      |    True      |    pass    |    pass    |
+|    assert  |    finally  |    lambda  |    try       |    elif    |    elif    |
+|    break   |    False    |    nonlacl |    with      |    import  |    del     |
+|    class   |    for      |    None    |    while     |    raise   |    or      | 
+|    continue|    from     |    not     |    yield     |    import  |    global  |
+|    def     |
+
+
 
 
 
