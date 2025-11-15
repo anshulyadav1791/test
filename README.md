@@ -19,6 +19,7 @@
 # Keywords 
 Keyworks are reserved wwords in python.
 |    and     |    else     |    in      |    return    |
+|------------|-------------|------------|--------------|
 |    as      |    except   |    is      |    True      |
 |    assert  |    finally  |    lambda  |    try       |
 |    break   |    False    |    nonlacl |    with      |
@@ -31,8 +32,4 @@ Keyworks are reserved wwords in python.
 
 
 
-| Name       | Age | City        |
-|------------|-----|-------------|
-| Anshul     | 18  | Shikohabad  |
-| Priya      | 22  | Lucknow     |
-| Rohan      | 25  | Delhi       |
+
