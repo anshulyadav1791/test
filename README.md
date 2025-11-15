@@ -27,3 +27,12 @@ Keyworks are reserved wwords in python.
 |    def     |    global   |    or      |    del       |
 |    if      |    pass     |    elif    |    import    |
 |    raise   |             |            |              |
+
+
+
+
+| Name       | Age | City        |
+|------------|-----|-------------|
+| Anshul     | 18  | Shikohabad  |
+| Priya      | 22  | Lucknow     |
+| Rohan      | 25  | Delhi       |
