@@ -70,6 +70,7 @@ float(input()) #float
  # Lists in Python 
  A Built-in data type that stores set of values
  It can store elements of different trpes (integer, float, string, etc.)
+ 
  marks = [87, 64, 33, 95, 76] #marks[0], marks[1]...
  
  student = ["Karan", 85, "Delhi"] #student[0], student[1]..
