@@ -5,49 +5,55 @@
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+const accentLight = '#ff8a1c';
+const accentDark = '#ff9f3c';
 
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    text: '#f9f4ef',
+    background: '#020202',
+    tint: accentLight,
+    icon: '#d9b377',
+    tabIconDefault: '#7a6d59',
+    tabIconSelected: accentLight,
+    card: '#121212',
+    border: '#2b2b2b',
+    success: '#22c55e',
+    warning: '#fb923c',
+    accent: '#ffb347',
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    text: '#f8f3ea',
+    background: '#010101',
+    tint: accentDark,
+    icon: '#e7b96a',
+    tabIconDefault: '#6b5b47',
+    tabIconSelected: accentDark,
+    card: '#111111',
+    border: '#232323',
+    success: '#22c55e',
+    warning: '#fb923c',
+    accent: '#ffb347',
   },
 };
 
 export const Fonts = Platform.select({
   ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
+    sans: 'Avenir Next',
     serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
     rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
     mono: 'ui-monospace',
   },
   default: {
-    sans: 'normal',
+    sans: 'sans-serif',
     serif: 'serif',
-    rounded: 'normal',
+    rounded: 'sans-serif',
     mono: 'monospace',
   },
   web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
+    sans: "'Avenir Next', 'Trebuchet MS', 'Segoe UI', sans-serif",
+    serif: "'Iowan Old Style', Georgia, serif",
+    rounded: "'Avenir Next Rounded', 'Trebuchet MS', sans-serif",
     mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
 });

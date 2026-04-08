@@ -1,112 +1,148 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { Collapsible } from '@/components/ui/collapsible';
-import { ExternalLink } from '@/components/external-link';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Fonts } from '@/constants/theme';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { Colors, Fonts } from '@/constants/theme';
+import React from 'react';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import Animated, { FadeInDown, FadeInUp } from 'react-native-reanimated';
 
 export default function TabTwoScreen() {
+  const palette = Colors.dark;
+
+  const routes = [
+    { name: 'Lake View Loop', distance: '18 km', level: 'Easy', icon: 'park' as const },
+    { name: 'Urban Sprint Ring', distance: '12 km', level: 'Moderate', icon: 'location-city' as const },
+    { name: 'Hill Climb Pro', distance: '25 km', level: 'Hard', icon: 'terrain' as const },
+  ];
+
+  const maintenance = [
+    { task: 'Chain lubrication', due: 'Due in 2 days', icon: 'build' as const },
+    { task: 'Front brake tuning', due: 'Due in 5 days', icon: 'handyman' as const },
+    { task: 'Tire pressure check', due: 'Due today', icon: 'settings' as const },
+  ];
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText
-          type="title"
-          style={{
-            fontFamily: Fonts.rounded,
-          }}>
-          Explore
-        </ThemedText>
-      </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
-        <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
-      </Collapsible>
-      <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
-        </ThemedText>
-        <Image
-          source={require('@/assets/images/react-logo.png')}
-          style={{ width: 100, height: 100, alignSelf: 'center' }}
-        />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Animations">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful{' '}
-          <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
-            react-native-reanimated
-          </ThemedText>{' '}
-          library to create a waving hand animation.
-        </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
-      </Collapsible>
-    </ParallaxScrollView>
+    <View style={[styles.screen, { backgroundColor: palette.background }]}>
+      <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
+        <Animated.View entering={FadeInUp.duration(500)} style={styles.titleWrap}>
+          <Text style={[styles.heading, { color: palette.text }]}>Explore Routes</Text>
+          <Text style={[styles.subheading, { color: palette.icon }]}>
+            Discover premium tracks, find smooth paths, and track your progress with style.
+          </Text>
+        </Animated.View>
+
+        <Animated.View entering={FadeInDown.delay(120).duration(550)} style={styles.section}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Suggested Routes</Text>
+          {routes.map((route) => (
+            <Pressable
+              key={route.name}
+              style={[styles.card, { backgroundColor: palette.card, borderColor: palette.border }]}>
+              <View style={[styles.routeIcon, { backgroundColor: '#1d1110' }]}>
+                <MaterialIcons name={route.icon} size={20} color={palette.tint} />
+              </View>
+              <View style={styles.cardTextWrap}>
+                <Text style={[styles.cardTitle, { color: palette.text }]}>{route.name}</Text>
+                <Text style={[styles.cardSub, { color: palette.icon }]}>{route.distance}</Text>
+              </View>
+              <View style={[styles.levelTag, { backgroundColor: 'rgba(255, 140, 20, 0.15)' }]}>
+                <Text style={[styles.levelText, { color: palette.tint }]}>{route.level}</Text>
+              </View>
+            </Pressable>
+          ))}
+        </Animated.View>
+
+        <Animated.View entering={FadeInDown.delay(200).duration(650)} style={styles.section}>
+          <Text style={[styles.sectionTitle, { color: palette.text }]}>Maintenance Timeline</Text>
+          {maintenance.map((item) => (
+            <View
+              key={item.task}
+              style={[styles.card, styles.maintenanceCard, { backgroundColor: palette.card, borderColor: palette.border }]}>
+              <MaterialIcons name={item.icon} size={19} color={palette.warning} />
+              <View style={styles.cardTextWrap}>
+                <Text style={[styles.cardTitle, { color: palette.text }]}>{item.task}</Text>
+                <Text style={[styles.cardSub, { color: palette.icon }]}>{item.due}</Text>
+              </View>
+              <MaterialIcons name="chevron-right" size={20} color={palette.icon} />
+            </View>
+          ))}
+        </Animated.View>
+      </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
+  screen: {
+    flex: 1,
   },
-  titleContainer: {
-    flexDirection: 'row',
+  content: {
+    paddingTop: 34,
+    paddingBottom: 120,
+    paddingHorizontal: 18,
+    gap: 18,
+  },
+  titleWrap: {
     gap: 8,
+  },
+  heading: {
+    fontSize: 34,
+    fontWeight: '800',
+    fontFamily: Fonts.rounded,
+  },
+  subheading: {
+    fontSize: 14,
+    lineHeight: 21,
+    maxWidth: 310,
+    fontFamily: Fonts.sans,
+  },
+  section: {
+    gap: 10,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    fontFamily: Fonts.rounded,
+    marginBottom: 2,
+  },
+  card: {
+    borderRadius: 18,
+    borderWidth: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  routeIcon: {
+    width: 36,
+    height: 36,
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  cardTextWrap: {
+    flex: 1,
+    gap: 2,
+  },
+  cardTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    fontFamily: Fonts.sans,
+  },
+  cardSub: {
+    fontSize: 12,
+    fontFamily: Fonts.sans,
+  },
+  levelTag: {
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 999,
+  },
+  levelText: {
+    fontSize: 11,
+    fontFamily: Fonts.rounded,
+    fontWeight: '700',
+    letterSpacing: 0.2,
+  },
+  maintenanceCard: {
+    paddingVertical: 14,
   },
 });

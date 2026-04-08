@@ -1,0 +1,35 @@
+Networking has been disabled
+Starting project at d:\tryrn\seecar
+React Compiler enabled
+Starting Metro Bundler
+Skipping dependency validation in offline mode
+› Opening exp://127.0.0.1:8083 on Medium_Phone
+Skipping Expo Go version validation in offline mode
+Waiting on http://localhost:8083
+Logs for your project will appear below.
+Unable to resolve asset "./assets/images/icon.png" from "icon" in your app.json or app.config.js
+Android node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+Android node_modules\expo-router\entry.js ▓▓░░░░░░░░░░░░░░ 17.9% ( 19/130)
+Android node_modules\expo-router\entry.js ▓▓▓░░░░░░░░░░░░░ 23.2% ( 90/187)
+Android node_modules\expo-router\entry.js ▓▓▓░░░░░░░░░░░░░ 23.7% ( 91/187)
+Android node_modules\expo-router\entry.js ▓▓▓░░░░░░░░░░░░░ 24.2% (106/243)
+Android node_modules\expo-router\entry.js ▓▓▓░░░░░░░░░░░░░ 24.2% (124/278)
+Android node_modules\expo-router\entry.js ▓▓▓▓░░░░░░░░░░░░ 28.8% (200/395)
+Android node_modules\expo-router\entry.js ▓▓▓▓░░░░░░░░░░░░ 30.8% (257/463)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓░░░░░░░░░░ 39.0% (336/555)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓░░░░░░░░░░ 39.1% (441/725)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 53.2% (567/781)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 58.1% (639/838)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 60.3% (709/950)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 60.3% ( 780/1016)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 69.6% ( 879/1066)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 73.0% ( 935/1110)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 76.7% (1009/1152)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 80.2% (1073/1198)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 85.1% (1118/1212)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.0% (1179/1253)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 93.4% (1244/1287)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.6% (1336/1396)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1431/1431)
+Android Bundled 91948ms node_modules\expo-router\entry.js (1431 modules)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1431/1431)

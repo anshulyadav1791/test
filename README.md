@@ -1,50 +1,101 @@
-# Welcome to your Expo app 👋
+﻿# SeeCar - Smart Bike Riding App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A premium black and orange themed React Native/Expo application for smart bicycle tracking, route discovery, and ride management.
 
-## Get started
+## 🎨 Design System
 
-1. Install dependencies
+**Colors:**
+- **Primary Orange:** `#ff8a1c` (light) / `#ff9f3c` (dark)
+- **Dark Background:** `#010101` / `#020202`
+- **Card Background:** `#111111` / `#121212`
+- **Text:** `#f8f3ea` (light) / `#f9f4ef` (dark)
+- **Accent Gold:** `#ffb347` / `#d9b377`
 
-   ```bash
-   npm install
-   ```
+**Typography:**
+- **Headline:** Avenir Next / sans-serif (900 weight)
+- **Body:** Avenir Next / sans-serif
+- **Rounded:** Avenir Next Rounded
+- **Mono:** Consolas / monospace
 
-2. Start the app
+## 📁 Updated Folder Structure
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+seecar/
+├── app/
+│   ├── _layout.tsx                 # Root navigation layout
+│   ├── login.tsx                   # Login screen (entry point)
+│   ├── register.tsx                # Registration screen
+│   ├── modal.tsx                   # Modal example
+│   └── (tabs)/
+│       ├── _layout.tsx             # Tab navigation layout
+│       ├── index.tsx               # Home/Ride screen
+│       └── explore.tsx             # Routes/Explore screen
+├── components/
+│   ├── bicycle.tsx                 # Animated bicycle component
+│   ├── themed-text.tsx             # Themed text component
+│   ├── themed-view.tsx             # Themed view component
+│   ├── haptic-tab.tsx              # Tab haptic feedback
+│   └── ui/
+│       └── icon-symbol.tsx         # Icon symbols
+├── constants/
+│   └── theme.ts                    # Color and font definitions
+├── hooks/
+│   ├── use-color-scheme.ts         # Color scheme hook
+│   └── use-theme-color.ts          # Theme color hook
+├── utils/
+│   ├── validation.ts               # Form & data validation
+│   └── constants.ts                # App constants
+├── types/
+│   └── index.ts                    # TypeScript definitions
+├── assets/
+│   └── images/                     # Image assets
+├── package.json
+├── tailwind.config.js              # Tailwind CSS config
+└── tsconfig.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔐 Authentication Flow
 
-## Learn more
+1. **Login Screen** - Email/password authentication with social login options
+2. **Register Screen** - User registration with validation
+3. **Main App** - Tab-based navigation with home and explore screens
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🚀 Quick Start
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm install
+npm start
 
-## Join the community
+# Or run directly:
+npm run ios
+npm run android
+npm run web
+```
 
-Join our community of developers creating universal apps.
+## 📦 Key Dependencies
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **expo-router** - File-based routing
+- **react-native-reanimated** - Smooth animations
+- **@expo/vector-icons** - Icon library
+- **nativewind** - Tailwind CSS for React Native
+- **tailwindcss** - Utility-first CSS
+
+## ✨ Features
+
+✅ Black & orange theme design  
+✅ Login/Register screens  
+✅ Animated components  
+✅ Dark mode by default  
+✅ Tailwind CSS support  
+✅ TypeScript support  
+✅ Responsive layouts  
+✅ Route discovery  
+✅ Ride statistics  
+
+## 🎨 Customization
+
+Edit colors in `constants/theme.ts` and fonts in the `Fonts` configuration.
+
+---
+
+**Built with React Native, Expo, and TypeScript**
